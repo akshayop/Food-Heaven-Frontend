@@ -1,5 +1,6 @@
 import {Routes, Route} from "react-router-dom";
-import { Home, Login } from "../pages";
+import {AboutUs, Dashboard, Home, Login, Menu, Services } from "../pages";
+import { Navbar, NavbarSet } from "./"
 import "../styles/index.css";
 import { getAuth } from "@firebase/auth";
 import { app } from "../config/firebase.config";
@@ -41,9 +42,16 @@ function App() {
     <div>
 
       {isLoading && (<p>Loading....</p>)}
+      <NavbarSet>
+        <Navbar />
+      </NavbarSet>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/menu" element={<Menu />} />
+        <Route exact path="/services" element={<Services />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
+        <Route exact path="/dashboard/*" element={<Dashboard />} />
         <Route path="*" Component={Page404} />
       </Routes>
 
@@ -51,4 +59,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
