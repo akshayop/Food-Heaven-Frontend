@@ -7,6 +7,7 @@ import { GoChecklist, GoSearch  } from "react-icons/go";
 import { BiSolidUser, BiSolidFoodMenu  } from "react-icons/bi";
 import { IoNotifications } from "react-icons/io5";
 import { FaTrashCan } from "react-icons/fa6";
+import { LiaRupeeSignSolid } from "react-icons/lia";
 
 export {
     MdMail,
@@ -24,5 +25,6 @@ export {
     GoSearch,
     IoNotifications,
     MdCloudUpload,
-    FaTrashCan
+    FaTrashCan,
+    LiaRupeeSignSolid,
 }

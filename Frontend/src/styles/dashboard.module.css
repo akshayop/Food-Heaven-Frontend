@@ -1,0 +1,404 @@
+/*************************************** 
+
+            Main Dashboard
+
+***************************************/
+
+.dashboardContainer {
+    display: flex;
+    align-items: center;
+}
+
+/*************************************** 
+
+            Left part of Dashboard
+
+***************************************/
+
+.leftSectionContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;  */
+    align-items: center;
+    height: 88.4vh;
+    width: 20rem;
+    min-width: 10rem;
+    max-width: 40rem;
+    padding-top: 2rem;
+    background-color: crimson;
+}
+
+.headercontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileImagecont {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+}
+
+.profileImagecont img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.headercontainer p {
+    padding-top: 0.7rem;
+    font-size: 1.5rem;
+    letter-spacing: normal;
+    color: whitesmoke;
+}
+
+.bodyContainer {
+    height: 100%;
+    width: inherit;
+    margin-top: 3rem;
+    padding-top: 1.6rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: rgb(214, 74, 102);
+    
+}
+
+.bodyContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.tabIsNotActive {
+    display: flex;
+
+    color: lavender;
+    height: 3rem;
+    width: 100%;
+    padding-left: 1rem;
+    line-height: 20px;
+    border-bottom: 1px solid crimson;
+}
+
+.tabIsActive {
+    display: flex;
+    color: white;
+    height: 3rem;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    border-bottom: 1px solid crimson;
+}
+
+.tabIsActive p,
+.tabIsNotActive p {
+    padding-left: 1rem;
+}
+
+.tabIsActive:hover,
+.tabIsNotActive:hover {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+
+/*************************************** 
+
+            Right part of Dashboard
+
+***************************************/
+
+.rightSectionContainer {
+    display: flex;
+    flex-direction: column;
+    height: 88.4vh;
+    width: 77%;
+    padding-top: 2rem;
+    min-height: 80vh;
+    max-height: 95vh;
+    overflow: auto;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    height: 2rem;
+    background-color:rgba(235, 234, 234, 0.616);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.searchBar input {
+    width: 85%;
+    height: 100%;
+    background: none;
+    border: none;
+    border-radius: 1rem;
+    padding-left: 1.5rem;
+}
+
+.searchbtn {
+    width: 15%;
+    height: 100%;
+    padding: 0.3rem;
+    border-radius: 0 1rem 1rem 0;
+    background-color: lightgray;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.notificationBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 100%;
+    margin-left: 1rem;
+    border-radius: 0.7rem;
+    box-shadow: rgb(248, 251, 253) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0.5) -3px -3px 6px 1px inset;
+    background-color: lightgray;
+}
+
+.notificationBtn:hover,
+.searchbtn:hover {
+    cursor: pointer;
+}
+
+
+/*************************************** 
+
+            Items
+
+***************************************/
+
+
+
+.dbItemsContainer {
+    padding: 2rem;
+}
+
+.imgWrapper {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.imgWrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.priceWrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+/*************************************** 
+
+            Add New Item 
+
+***************************************/
+
+
+.addItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    align-items: center;
+    padding: 2rem;
+
+}
+
+.addItemSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    width: 45rem; 
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid  #B43757;
+}
+
+.addItemInputField {
+    width: 80%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    padding: 0 1rem 0 2rem;
+    border-radius: 0.7rem;
+    background-color:rgba(255, 254, 254, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.itemsCategoryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    /* gap: 3rem; */
+    margin: 1rem 0;
+}
+
+.activeItemsCategory,
+.notActiveItemsCategory {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    overflow-anchor: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border: 1px solid #8D021F;
+}
+
+
+.activeItemsCategory:hover,
+.notActiveItemsCategory:hover {
+    cursor: pointer;
+}
+
+.activeItemsCategory ,
+.activeItemsCategory a,
+.notActiveItemsCategory:hover {
+    color: white;
+    background-color: #8D021F;
+}
+
+.spinerLoading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+
+.imageUploadContainer {
+    width: 80%;
+    height: 15rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background-color:rgba(255, 254, 254, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px dashed;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.uploadImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.uploadImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.uploadImageIcon {
+    font-size: 3rem;
+}
+
+.uploadImageTag {
+    color: gray;
+}
+
+.imageContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.imageStyle {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.deleteBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: rgb(253, 244, 244);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index:100;
+}
+
+.deleteBtn:hover {
+    color: red;
+}
+
+.progressContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressBarWrapper {
+    position: relative;
+    height: 1.5rem;
+    width: 10rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 1rem;
+    border: 1px solid #8D021F;
+
+}   
+
+.crimsonBar {
+    height: 100%;
+    width: 0;
+    border-radius: 1rem;
+    background-color: #8D021F; 
+    transition: all  ease;
+}
+
+.percentage {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    color: white;
+}
+
+.submitBtn {
+    width: 30%;
+    margin-top: 1rem;
+    padding: 0.7rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: #8D021F;
+    
+    cursor: pointer;
+}
+
