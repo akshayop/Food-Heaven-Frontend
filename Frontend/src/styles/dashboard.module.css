@@ -402,3 +402,27 @@
     cursor: pointer;
 }
 
+/*************************************** 
+
+           All USers 
+
+***************************************/
+
+.verifiedWrapper,
+.notVerifiedWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    color: whitesmoke;
+    border-radius: 1rem;
+}
+
+.verifiedWrapper {
+    background-color: #5cb85c;
+}
+
+.notVerifiedWrapper {
+    background-color: #ff4757;
+}

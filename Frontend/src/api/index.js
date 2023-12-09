@@ -52,3 +52,12 @@ export const deleteProducts = async (product_id) => {
     return null;
   }
 };
+
+export const getAllUsers = async () => {
+  try {
+    const res = await axios.get(`${apiRoot}/api/users/show-users`);
+    return res.data.data;
+  } catch (err) {
+    return null;
+  }
+};
