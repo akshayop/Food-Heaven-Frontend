@@ -8,5 +8,6 @@ router.get('/', (req, res) => {
 
 
 router.get('/jwt-verification', userController.jwtVerification);
+router.get('/show-users', userController.showUser);
 
 module.exports = router;
