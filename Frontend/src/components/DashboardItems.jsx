@@ -13,13 +13,11 @@ export default function DashboardItems() {
 
   useEffect(() => {
     if (!product) {
-      console.log("loaded");
       getProducts().then((data) => {
         dispatch(setAllProducts(data));
       });
     }
     else {
-      console.log("loaded");
       getProducts().then((data) => {
         dispatch(setAllProducts(data));
       });
