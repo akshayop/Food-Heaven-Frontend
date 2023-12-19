@@ -1,5 +1,7 @@
 const admin = require('firebase-admin');
-let data = []
+let data = [];
+
+// jwt verification
 
 module.exports.jwtVerification = async (req, res) => {
     if(!req.headers.authorization) {
@@ -42,6 +44,8 @@ const listALlUsers = async (nextpagetoken) => {
 
 listALlUsers();
 
+
+// show all users
 module.exports.showUser = async (req, res) => {
   listALlUsers();
   try {
