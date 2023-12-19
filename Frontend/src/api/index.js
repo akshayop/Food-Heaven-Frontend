@@ -53,6 +53,8 @@ export const deleteProducts = async (product_id) => {
   }
 };
 
+// getting all users
+
 export const getAllUsers = async () => {
   try {
     const res = await axios.get(`${apiRoot}/api/users/show-users`);
@@ -61,3 +63,46 @@ export const getAllUsers = async () => {
     return null;
   }
 };
+
+// adding new item to cart
+
+export const addItemToCart = async (userId, data) => {
+  try {
+    const res = await axios.post(
+      `${apiRoot}/api/products/add-to-cart/${userId}`,
+      { ...data }
+    );
+    return res.data.data;
+  } catch (err) {
+    return null;
+  }
+};
+
+// getting cart details
+
+export const getItemFromcart = async (userId) => {
+  try {
+    const res = await axios.get(
+      `${apiRoot}/api/products/get-cart-items/${userId}`
+    );
+    return res.data.data;
+  } catch (err) {
+    return null;
+  }
+};
+
+// upadating cart items quantity
+
+export const increaseQuantity = async (userId, productId, type) => {
+  try {
+    const res = await axios.post(
+      `${apiRoot}/api/products/update-cart/${userId}`,
+      null,
+      { params: { productId: productId, type: type } }
+    );
+  } catch (err) {
+    return null;
+  }
+};
+
+

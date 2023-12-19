@@ -1,47 +1,55 @@
-import {Routes, Route} from "react-router-dom";
-import {AboutUs, Dashboard, Home, Login, Menu, Services } from "../pages";
-import { Navbar, NavbarSet } from "./"
+import { Routes, Route } from "react-router-dom";
+import { AboutUs, Dashboard, Home, Login, Menu, Services } from "../pages";
+import { Loading, Navbar, NavbarSet } from "./";
 import "../styles/index.css";
+import styles from "../styles/app.module.css";
 import { getAuth } from "@firebase/auth";
 import { app } from "../config/firebase.config";
 import { useEffect, useState } from "react";
-import { validateUserJWTToken } from '../api';
+import { getItemFromcart, validateUserJWTToken } from "../api";
 import { useDispatch } from "react-redux";
 import { setUserDetails } from "../context/actions/userAction";
+import { setCartItems } from "../context/actions/cartAction";
 
 const Page404 = () => {
-  return <h1>404</h1>
-}
+  return <h1>404</h1>;
+};
 
 function App() {
-
   const auth = getAuth(app);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const dispatch = useDispatch();
 
-  useEffect(( )=> {
-
+  useEffect(() => {
+    setIsLoading(true);
     auth.onAuthStateChanged((cred) => {
-      if(cred) {
-          cred.getIdToken()
-              .then(token => {
-                  validateUserJWTToken( token )
-                      .then(data => {
-                          dispatch(setUserDetails(data));
-                      });
-              });
+      if (cred) {
+        cred.getIdToken().then((token) => {
+          validateUserJWTToken(token).then((data) => {
+            if(data) {
+              getItemFromcart(data.user_id).then((items) => {
+                dispatch(setCartItems(items));
+              })
+            }
+            dispatch(setUserDetails(data));
+          });
+        });
       }
-      
     });
 
-    setIsLoading(false);
-  }, [])
+    setInterval(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
 
   return (
     <div>
-
-      {isLoading && (<p>Loading....</p>)}
+      {isLoading && (
+        <div className={styles.loadingWrapper}>
+          <Loading />
+        </div>
+      )}
       <NavbarSet>
         <Navbar />
       </NavbarSet>
@@ -54,9 +62,8 @@ function App() {
         <Route exact path="/dashboard/*" element={<Dashboard />} />
         <Route path="*" Component={Page404} />
       </Routes>
-
     </div>
-  )
+  );
 }
 
 export default App;

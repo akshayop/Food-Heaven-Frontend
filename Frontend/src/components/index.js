@@ -12,6 +12,13 @@ import DashboardUsers from "./DashboardUsers";
 import DataTable from "./DataTable";
 import AddItemInput from "./AddItemInput";
 import SpinLoading from "./SpinLoading";
+import Loading from "./Loading";
+import HomeHead from "./HomeHead";
+import HomeMiddle from './HomeMiddle';
+import HomeFooter from "./HomeFooter";
+import ItemCard from "./ItemCard";
+import Dishes from "./Dishes";
+import Cart from "./Cart";
 
 export {
     App,
@@ -27,5 +34,12 @@ export {
     DashboardUsers,
     DataTable,
     AddItemInput,
-    SpinLoading
+    SpinLoading,
+    Loading,
+    HomeHead,
+    HomeMiddle,
+    HomeFooter,
+    ItemCard,
+    Dishes,
+    Cart
 }

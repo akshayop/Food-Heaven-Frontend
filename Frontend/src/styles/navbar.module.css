@@ -104,8 +104,8 @@ nav {
 
 .cartCount p {
     font-size: 0.7rem;
-    padding-top: 0.07rem;
-    padding-left: 0.25rem;
+    padding-top: 0.03rem;
+    text-align: center;
 }
 
 .profileContainer {

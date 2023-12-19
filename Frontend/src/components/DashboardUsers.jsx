@@ -60,31 +60,7 @@ export default function DashboardUsers() {
           ]}
           data={allUsers || []}
           title="Users List"
-          //   actions={[
-          //     {
-          //       icon: "edit",
-          //       tooltip: "Edit Data",
-          //       onClick: (event, rowData) => {
-          //         alert("You want do edit " + rowData.product_id);
-          //       },
-          //     },
-          //     {
-          //       icon: "delete",
-          //       tooltip: "Delete Data",
-          //       onClick: (event, rowData) => {
-          //         if (
-          //           window.confirm("Are you sure you want to perform this action")
-          //         ) {
-          //           deleteProducts(rowData.product_id).then(() => {
-          //             toast.success("Product Deleted");
-          //             getProducts().then((data) => {
-          //               dispatch(setAllProducts(data));
-          //             });
-          //           });
-          //         }
-          //       },
-          //     },
-          //   ]}
+          
         />
       </div>
     </>

@@ -1,0 +1,326 @@
+/*******************************************************
+
+                    Home 
+
+*******************************************************/
+
+.mainContainer {
+  margin: 1rem 2rem;
+}
+
+/*******************************************************
+
+                    Home Head
+
+*******************************************************/
+
+.homeHeadWrapper {
+  display: flex;
+}
+
+/*******************************************************
+
+                    Home Head Left part
+
+*******************************************************/
+
+.leftContainer {
+  width: 45%;
+  mix-blend-mode: multiply;
+}
+
+.leftContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*******************************************************
+
+                Home Head Right Part
+
+*******************************************************/
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+  width: 55%;
+  padding: 0 4rem;
+}
+
+.rightContainer h1 {
+  font-family: sans-serif;
+  font-size: 3rem;
+  word-spacing: 1rem;
+  letter-spacing: 0.4rem;
+  margin-bottom: 0;
+}
+
+.rightContainer h1 span {
+  color: crimson;
+}
+
+.rightContainer h6 {
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  word-spacing: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.rightContainer p a {
+  pointer-events: none;
+  color: gray;
+}
+
+.rightContainer p {
+  padding: 1.5rem 0 0 3rem;
+  font-size: 1.1rem;
+  text-align: right;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
+  color: gray;
+}
+
+.orderBtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 9rem;
+  height: 3rem;
+  margin-top: 2.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  color: white;
+  border-radius: 3rem;
+  background-color: crimson;
+}
+
+.orderBtn a {
+  pointer-events: none;
+  color: white;
+}
+
+.orderBtn:hover {
+  cursor: pointer;
+}
+
+/*******************************************************
+
+                Home Middle
+
+*******************************************************/
+
+.homeMiddleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeMiddleContainer h1 {
+  font-family: sans-serif;
+  word-spacing: 0.3rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.imageWraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  border: 1px solid #dc143c;
+  border-radius: 2rem;
+}
+
+.imageWraper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.imageWraper span {
+  padding: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+/*******************************************************
+
+                Home Footer
+
+*******************************************************/
+
+.homeFooterContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  margin-left: 5rem;
+}
+
+.footerWrapper {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dashWrapper {
+  width: 10rem;
+  margin-top: 0.5rem;
+  border: 1.5px solid crimson;
+}
+
+.fruitsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.fruitsWrap::-webkit-scrollbar {
+  display: block;
+  height: 3px;
+}
+
+.fruitsWrap::-webkit-scrollbar-thumb,
+.fruitsWrap::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.fruitsWrap::-webkit-scrollbar-thumb {
+  background-color: #dc143c;
+}
+
+.fruitsWrap::-webkit-scrollbar-track {
+  background-color: #edf2f4;
+}
+
+/*  Item Card */
+
+.itemCardContainer {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 20%;
+  margin: 2rem;
+  padding: 20px;
+  color: white;
+  background-color: #dc143c;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.itemCardContainer:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.imgCard {
+  height: 5rem;
+  width: 50%;
+}
+
+.imgCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.titleCard {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.priceCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basketCard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.4rem;
+}
+
+.basketCard:hover {
+  cursor: pointer;
+}
+
+/* Dishes */
+
+.dishesContainer {
+  margin-top: 2rem;
+}
+
+.statusCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activeDishCard,
+.notActiveDishCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 7rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  transition: transform .2s;
+}
+
+.activeDishCard a,
+.notActiveDishCard a {
+  pointer-events: none;
+}
+
+.activeDishCard,
+.activeDishCard a{
+    color: white;
+    background-color: #dc143c;
+    transform: scale(1.2);
+}
+
+.activeDishCard:hover,
+.notActiveDishCard:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #dc143c;
+    transform: scale(1.2);
+}
+
+.productCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+
+

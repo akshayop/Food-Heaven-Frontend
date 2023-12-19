@@ -3,7 +3,7 @@ import styles from "../styles/login.module.css";
 import { LoginInput } from '../components';
 import { websiteLogo } from '../assets';
 import { FaLock, FcGoogle, MdMail } from '../assets/icons';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { btnClick, landingPage } from '../animation';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { app } from "../config/firebase.config"

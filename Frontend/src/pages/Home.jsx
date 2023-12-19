@@ -1,16 +1,34 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styles from "../styles/home.module.css";
+import { HomeHead, HomeMiddle, HomeFooter, Cart} from "../components";
+import { getProducts } from "../api";
+import { setAllProducts } from "../context/actions/productAction";
 
 const Home = () => {
+  const products = useSelector((state) => state.product);
+  const isCart = useSelector((state) => state.isCart);
+  const dispatch = useDispatch();
 
-  const user = useSelector(state => state.user)
+  useEffect(() => {
+    if( !products ) {
+        getProducts().then((data) => {
+            dispatch(setAllProducts(data));
+        })
+    }
+}, [])
+
   return (
-    <>  
-      <h1>
-        home
-      </h1>
-    </>
-  )
-}
+    <>
+      <div className={styles.mainContainer}>
+        <HomeHead />
+        <HomeMiddle />
+        <HomeFooter />
+      </div>
 
-export default Home
+      {isCart && <Cart />}
+    </>
+  );
+};
+
+export default Home;
