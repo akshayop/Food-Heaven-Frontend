@@ -8,5 +8,7 @@ router.delete('/delete/:productId', productController.deletingProduct);
 router.post('/add-to-cart/:userId', productController.addToCart);
 router.get('/get-cart-items/:userId', productController.getCartItem);
 router.post('/update-cart/:userId', productController.updateCart);
+router.post('/create-checkout-session', productController.createCheckout);
+router.post('/webhook', express.raw({type: 'application/json'}), productController.webHook);
 
 module.exports = router;
