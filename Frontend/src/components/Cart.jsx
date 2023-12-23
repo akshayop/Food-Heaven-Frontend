@@ -6,11 +6,12 @@ import { MdClose, FaMinus, FaPlus, LiaRupeeSignSolid } from "../assets/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { setCartOff } from "../context/actions/getCartAction";
 import { toast } from "react-toastify";
-import { getItemFromcart, increaseQuantity } from "../api";
+import { getItemFromcart, increaseQuantity, stripePayment } from "../api";
 import { setCartItems } from "../context/actions/cartAction";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.user);
   const [grandTotal, setGrandTotal] = useState(0);
 
   const dispatch = useDispatch();
@@ -25,6 +26,21 @@ const Cart = () => {
       });
     }
   }, [cart]);
+
+  const handleCheckout = () => {
+    const data = {
+      user: user,
+      cart: cart,
+      total: grandTotal
+    }
+
+    stripePayment(data).then((res) => {
+      if(res.url) {
+        window.location.href = res.url;
+      }
+    }).catch((err) => console.log(err));
+
+  }
 
   return (
     <>
@@ -63,6 +79,10 @@ const Cart = () => {
                     {grandTotal}
                   </p>
                 </div>
+
+                <motion.button className={styles.checkoutBtn} {...btnClick} onClick={handleCheckout}>
+                  Check Out
+                </motion.button>
               </div>
             </>
           ) : (

@@ -106,3 +106,17 @@ export const increaseQuantity = async (userId, productId, type) => {
 };
 
 
+// payment
+
+export const stripePayment = async (data) => {
+  try {
+    const res = await axios.post(
+      `${apiRoot}/api/products/create-checkout-session`,
+      data, 
+    );
+
+    return res.data;
+  } catch (err) {
+    return null;
+  }
+};

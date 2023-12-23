@@ -1,0 +1,35 @@
+.successContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.successContainer h1 {
+    color: rgb(0, 255, 170);
+}
+
+.imageWrapper {
+    height: 20rem;
+    width: 20rem;
+    mix-blend-mode: multiply;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homeBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 8.6rem;
+    font-size: 1.2rem;
+}
+
+.checkoutBtn {
+
+}

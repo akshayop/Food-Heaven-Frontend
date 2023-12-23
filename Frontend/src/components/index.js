@@ -19,6 +19,7 @@ import HomeFooter from "./HomeFooter";
 import ItemCard from "./ItemCard";
 import Dishes from "./Dishes";
 import Cart from "./Cart";
+import CheckoutSuccess from "./CheckoutSuccess";
 
 export {
     App,
@@ -41,5 +42,6 @@ export {
     HomeFooter,
     ItemCard,
     Dishes,
-    Cart
+    Cart,
+    CheckoutSuccess,
 }
