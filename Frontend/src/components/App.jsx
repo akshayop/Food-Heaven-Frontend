@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { AboutUs, Dashboard, Home, Login, Menu, Services } from "../pages";
-import { CheckoutSuccess, Loading, Navbar, NavbarSet } from "./";
+import { CheckoutSuccess, Loading, Navbar, NavbarSet, UsersOrder } from "./";
 import "../styles/index.css";
 import styles from "../styles/app.module.css";
 import { getAuth } from "@firebase/auth";
@@ -61,6 +61,7 @@ function App() {
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/dashboard/*" element={<Dashboard />} />
         <Route exact path="/checkout-success" element={<CheckoutSuccess />} />
+        <Route exact path="/user-orders" element={<UsersOrder />} />
         <Route path="*" Component={Page404} />
       </Routes>
     </div>

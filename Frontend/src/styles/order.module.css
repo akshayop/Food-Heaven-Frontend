@@ -1,0 +1,183 @@
+.mainContainer {
+  margin: 1rem;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 65vh;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: lightgray;
+}
+
+.orderDetailsWrappper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  color: white;
+  background-color: #bf0a30;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.address {
+  margin-left: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.address h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+.address h5 {
+  color: rgb(228, 228, 228);
+  font-weight: 200;
+}
+
+.imageContainer {
+  width: 5rem;
+  height: 5rem;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+}
+
+.leftPart {
+  display: flex;
+  align-items: center;
+}
+
+.rightPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.3rem;
+  text-transform: capitalize;
+}
+
+.priceList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.endContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.endContainer .price {
+  background: none;
+}
+
+.status {
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.7rem;
+  text-transform: capitalize;
+  background-color: seagreen;
+  border: 1px solid white;
+}
+
+.statusContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.stat {
+  padding-top: 0.5rem;
+}
+
+.stat select {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+}
+
+.prepSts,
+.cancSts,
+.delSts {
+  width: 7rem;
+  padding: 0.4rem;
+  border-radius: 0.9rem;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.prepSts {
+  background-color: rgb(248, 91, 34);
+}
+
+.cancSts {
+  background-color: #d9534f;
+}
+
+.delSts {
+  background-color: #28a745;
+}
+
+/****************************************************************
+
+                        user Details
+
+****************************************************************/
+
+.userContainer {
+    margin: 2rem;
+}
+
+.dataNo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.title h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.dashWrapper {
+    width: 10rem;
+    margin-top: 0.5rem;
+    border: 1.5px solid crimson;
+  }
+
+.orderListWrapper {
+    margin-top: 1rem;
+}

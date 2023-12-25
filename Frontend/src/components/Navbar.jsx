@@ -124,9 +124,13 @@ export default function Navbar() {
                     <Link className={styles.linkHover} to={"/profile"}>
                       My Profile
                     </Link>
-                    <Link className={styles.linkHover} to={"/dashboard/home"}>
-                      Dashboard
-                    </Link>
+
+                    {user?.user_id === import.meta.env.VITE_ADMIN_ID && (
+                      <Link className={styles.linkHover} to={"/dashboard/home"}>
+                        Dashboard
+                      </Link>
+                    )}
+
                     <Link className={styles.linkHover} to={"/user-orders"}>
                       Orders
                     </Link>

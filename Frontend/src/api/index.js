@@ -105,17 +105,38 @@ export const increaseQuantity = async (userId, productId, type) => {
   }
 };
 
-
 // payment
 
 export const stripePayment = async (data) => {
   try {
     const res = await axios.post(
       `${apiRoot}/api/products/create-checkout-session`,
-      data, 
+      data
     );
 
     return res.data;
+  } catch (err) {
+    return null;
+  }
+};
+
+export const getOrdersDetails = async () => {
+  try {
+    const res = await axios.get(`${apiRoot}/api/products/orders`);
+    return res.data.data;
+  } catch (err) {
+    return null;
+  }
+};
+
+export const updateOrdersStatus = async (orderId, status) => {
+  try {
+    const res = await axios.post(
+      `${apiRoot}/api/products//update-orders/${orderId}`,
+      null,
+      { params: { status: status } }
+    );
+    return res.data.data;
   } catch (err) {
     return null;
   }

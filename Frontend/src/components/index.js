@@ -20,6 +20,8 @@ import ItemCard from "./ItemCard";
 import Dishes from "./Dishes";
 import Cart from "./Cart";
 import CheckoutSuccess from "./CheckoutSuccess";
+import OrderDetails from "./OrderDetails";
+import UsersOrder from "./UsersOrder";
 
 export {
     App,
@@ -44,4 +46,6 @@ export {
     Dishes,
     Cart,
     CheckoutSuccess,
+    OrderDetails,
+    UsersOrder
 }
