@@ -280,7 +280,6 @@ module.exports.webHook = (req, res) => {
 };
 
 const createOrder = async (customer, intent, res) => {
-
   try {
     const orderId = Date.now();
     const data = {
@@ -309,9 +308,7 @@ const createOrder = async (customer, intent, res) => {
 };
 
 const deleteCart = async (userId, items) => {
-  
   items.map(async (data) => {
-    
     await db
       .collection("cartItems")
       .doc(`/${userId}/`)
@@ -320,4 +317,45 @@ const deleteCart = async (userId, items) => {
       .delete()
       .then(() => console.log("successsfully deleted"));
   });
+};
+
+// Orders details
+
+module.exports.orderDetails = async (req, res) => {
+  (async () => {
+    try {
+      let query = db.collection("orders");
+      let response = [];
+      await query.get().then((querysnap) => {
+        let docs = querysnap.docs;
+        docs.map((doc) => {
+          response.push({ ...doc.data() });
+        });
+        return response;
+      });
+      return res.status(200).send({ success: true, data: response });
+    } catch (err) {
+      return res.send({ success: false, msg: `Error: ${err}` });
+    }
+  })();
+};
+
+// update orders
+
+module.exports.updateOrder = async (req, res) => {
+  const orderId = req.params.orderId;
+  const sts = req.query.status;
+
+  try {
+    const updateOrder = await db
+      .collection("orders")
+      .doc(`/${orderId}/`)
+      .update({sts});
+
+    console.log("updated order",updateOrder);
+
+    return res.status(200).send({ success: true, data: updateOrder });
+  } catch (err) {
+    return res.send({ success: false, msg: `Error: ${err}` });
+  }
 };
